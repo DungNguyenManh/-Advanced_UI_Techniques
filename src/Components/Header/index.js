@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/logo.jpg';
+import Button from '@mui/material/Button';
+import { FaAngleDown } from 'react-icons/fa6';
+import CountryDropdown from '../CountryDropdown';
 
 const Header = () => {
     return (
@@ -16,8 +19,12 @@ const Header = () => {
                 <div className="header">
                     <div className="container">
                         <div className="row">
-                            <div className="logoWrapper col-sm-3">
+                            <div className="logoWrapper d-flex align-items-center col-sm-2">
                                 <Link to={"/"}><img src={Logo} alt='logo'></img></Link>
+                            </div>
+
+                            <div className="col-sm-10 d-flex align-items-center part2">
+                                <CountryDropdown />
                             </div>
                         </div>
                     </div>
